@@ -30,6 +30,10 @@ buildscript {
 
 rootProject.allprojects {
     repositories {
+        maven {
+            url 'http://192.168.1.110:6001/repository/maven-releases/'
+            allowInsecureProtocol = true
+        }
         google()
         mavenCentral()
     }
@@ -50,5 +54,5 @@ android {
 }
 
 dependencies {
-    implementation 'io.openim:core-sdk:3.8.3@aar'
+    implementation 'io.openim:core-sdk:3.8.4-internal.1@aar'
 }
